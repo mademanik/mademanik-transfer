@@ -1,0 +1,29 @@
+curl --location 'https://api.devmandiri.co.id/gateway/TbwFundTransferOverbooking/1.0/fundTransferOverbooking' \
+--header 'Accept: application/json' \
+--header 'Content-Type: application/json' \
+--header 'Authorization: ••••••' \
+--data '{
+  "fundTransferOverbookingReq": {
+    "header": {
+      "externalId": "1000262335165827739",
+      "partnerId": "UATMANULIFE",
+      "memberId": "UATMANULIFE1",
+      "signature": "CJIlr4IA+MFqy0r21IL62T8RoDrgICKhCGVGw+9EH//Q6/eTKM9aB9C/DTqoh1CtYnZhRtCdkpfHdIPQn1VuzFF3QYbSvwDe1Z9r3/ZO1b7Z+gdz917z65sUjhZNkH2VpXkk+e7B8MEmwo9Y33lvz+hPAOZdj8s7+FpoOtLjxs9DBGEaj5dSw7mMqTA5/ZyMaBbshPA+R2S8L88KKRj1nEndc4BogHr0fd8zZ8tkjLCbmnJ//m5ZWjTT4uWh9my8c4DZ91amGlcgsukjn4Y02yDsBnfG05PLaiqKuBDT+Xr9FdLdNxV2RVIn5JI3L/e90X6tD7s/0DZElHi+ibIhYQ==",
+      "timestamp": "2025-08-29T14:52:48.739Z"
+    },
+    "body": [
+      {
+        "customerReffNumber": "2508293931000262723", 
+        "debitAccount": "1060015536231",
+        "creditAccount": "0611103921",
+        "valueAmount": "360600.00",
+        "valueCurrency": "IDR",
+        "valueDate": "2025-08-29",
+        "remark1": "1000262335210825",
+        "remark2": "",
+        "remark3": "",
+        "remark4": ""
+      }
+    ]
+  }
+}'
