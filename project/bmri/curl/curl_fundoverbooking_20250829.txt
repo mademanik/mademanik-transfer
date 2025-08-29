@@ -1,0 +1,53 @@
+REQUEST:
+
+curl --location 'https://api.devmandiri.co.id/gateway/TbwFundTransferOverbooking/1.0/fundTransferOverbooking' \
+--header 'Accept: application/json' \
+--header 'Content-Type: application/json' \
+--header 'Authorization: ••••••' \
+--data '{
+  "fundTransferOverbookingReq": {
+    "header": {
+      "externalId": "1000262335165827739",
+      "partnerId": "UATMANULIFE",
+      "memberId": "UATMANULIFE1",
+      "signature": "Lb2gNivtfzDw21Fl9YI60kto1t2eVe1Zs9vTWu0RaNoUBdsULC3xSGhdRzZOn5/KW6xfbi7AukVbYAO4wvr+oIQK+uttPYmqFMIE8wRUBLpY2mJ/t3gu/K/YuorqlPJNujaQ7L9iGFwTAEiCjBh4ULl5nXpv2K3oa3BGTwccWr5nDnBMhXm72SRhbNP8ZQjUd3usIDffSbBAHeFymshKARV0mj0pF7bxmbaqXLGa54WY8bctO0dJv8ehk92YEyXhyI0FqdaPNrveO3irQ5uBvWORLT0WPCEPq99KBiumkrbvKiWtglEynywF3SKIEnbL1LvVYex85MDialK+JZqdrA==",
+      "timestamp": "2025-08-29T14:52:48.739Z"
+    },
+    "body": [
+      {
+        "customerReffNumber": "2508297311000262335",
+        "debitAccount": "1150010883983",
+        "creditAccount": "0616878365",
+        "valueAmount": "360600.00",
+        "valueCurrency": "IDR",
+        "valueDate": "2025-08-27",
+        "remark1": "1000262335210825",
+        "remark2": "",
+        "remark3": "",
+        "remark4": ""
+      }
+    ]
+  }
+}'
+
+RESPONSE:
+{
+    "fundTransferOverbookingRes": {
+        "header": {
+            "externalId": "1000262335165827739",
+            "partnerId": "UATMANULIFE",
+            "memberId": "UATMANULIFE1",
+            "timestamp": "2025-08-29T14:52:48.739Z",
+            "responseTimestamp": "2025-08-29T15:39:34.638Z"
+        },
+        "body": [
+            {
+                "customerReffNumber": "2508297311000262335",
+                "internalId": "",
+                "responseCode": "7",
+                "responseMessage": "Request has been processed unsuccessfully.",
+                "errorMessage": "Transaction has previously been processed"
+            }
+        ]
+    }
+}
