@@ -1,0 +1,51 @@
+curl --location 'https://api.devmandiri.co.id/gateway/TbwFundTransferOverbooking/1.0/fundTransferOverbooking' \
+--header 'Accept: application/json' \
+--header 'Content-Type: application/json' \
+--header 'Authorization: Bearer eyJraWQiOiJtaXRyYWEiLCJhbGciOiJSUzUxMiJ9.eyJwYXJ0bmVySWQiOiJVQVRNQU5VTElGRSIsImNsaWVudElkIjoiZjZjYjAxYmMtZjE4Mi00Njc1LTg0MjQtZTc4MzMyYzUzNGYyIiwic2lnbiI6IlgtUEFSVE5FUi1JRCIsInN1YiI6IkFkbWluaXN0cmF0b3IiLCJhdWQiOiJhdWQiLCJuYmYiOjE3NTY0NTc5MDYsImlzcyI6Im1hbmRpcmkiLCJleHAiOjE3NTY0NTg5MjYsImlhdCI6MTc1NjQ1ODAyNn0.j0EP0WKAp-eP7WrjzXUjYPt21TmlGuBukXrnM__7QV0CdsMjyA2xl1rzN0QCr6QI0IHRTR7JEhmy1DTJX570m2_NIrkp9tbwgPE68IpaU_8qgJBAn69Gjhh2D31aOwtA0zV2yoLP6zG223-9uaoS6LBQm4dAw70okS1bY9z8sqd39QFXG5GAPBnHEaBmAaQ9UigTjFrHUmkyqTzc5pr_UE6dkyNNjSKb1JJujOUtlrrWT6Ikj7UbnP15hBbUxIcdT2-1sSIX7ZbY0O9Fs1RmzsmrAHRERbNXUeOo9ndNS6ypOh79DTPxdOP86iZ1PusVWohWOudmPo-3KzpmQppSCQ' \
+--data '{
+  "fundTransferOverbookingReq": {
+    "header": {
+      "externalId": "1000262335165827739",
+      "partnerId": "UATMANULIFE",
+      "memberId": "UATMANULIFE1",
+      "signature": "FTYT0KrQrAtJMR8NsGeuw/jESdTSlyrRZmF6FEaNO8GDM4FVwZraqgeHV4n5+wLlh9+ceJeCPb+wOeDXcXNCyqmGXEdBlGrvI9MZ55ktY2WrCpVisG/GdXN0er7c1uybHROXeF0U9jIOcBU9spa0vkRomVazhGPWUo94AhRHNQXLXcJjILJKNN8Ri45TVx9ZQ2TMJP1arp4tkptjisws2NUoK/sGUXHrmX1y6uWYYZcFjQPVICnNQWRwSbpOQObox2v8liEs01xv3iV74ky/Cq0IHm3GqnWZAR7wfSw60opDiM7tvB2X/g09hn5jCT4AFoMxhtJM0aPVFUhXAGSgtQ==",
+      "timestamp": "2025-08-29T14:52:48.739Z"
+    },
+    "body": [
+      {
+        "customerReffNumber": "2508293191000262335", 
+        "debitAccount": "1150010883983",
+        "creditAccount": "0616878365",
+        "valueAmount": "360600.00",
+        "valueCurrency": "IDR",
+        "valueDate": "2025-08-29",
+        "remark1": "1000262335210825",
+        "remark2": "",
+        "remark3": "",
+        "remark4": ""
+      }
+    ]
+  }
+}'
+
+
+{
+    "fundTransferOverbookingRes": {
+        "header": {
+            "externalId": "1000262335165827739",
+            "partnerId": "UATMANULIFE",
+            "memberId": "UATMANULIFE1",
+            "timestamp": "2025-08-29T14:52:48.739Z",
+            "responseTimestamp": "2025-08-29T16:02:38.849Z"
+        },
+        "body": [
+            {
+                "customerReffNumber": "2508293191000262335",
+                "internalId": "",
+                "responseCode": "7",
+                "responseMessage": "Request has been processed unsuccessfully.",
+                "errorMessage": "Transaction has previously been processed"
+            }
+        ]
+    }
+}
